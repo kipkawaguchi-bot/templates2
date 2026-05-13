@@ -1,0 +1,29 @@
+<!-- ===== header ===== -->
+<header class="header js-header">
+	<div class="header_inner c-wrap">
+		<!-- logo: トップは h1 / 下層は div -->
+		<?php if ($_SERVER["SCRIPT_NAME"] === "/index.html"): ?>
+		<h1 class="header_logo">
+			<a href="/"><span class="header_logo_txt">SITE NAME</span></a>
+		</h1>
+		<?php else: ?>
+		<div class="header_logo">
+			<a href="/"><span class="header_logo_txt">SITE NAME</span></a>
+		</div>
+		<?php endif; ?>
+		<!-- nav（ダミー） -->
+		<nav class="header_nav js-nav">
+			<ul class="header_nav_list">
+				<li class="header_nav_item"><a href="/service/">Service</a></li>
+				<li class="header_nav_item"><a href="/locations/">Locations</a></li>
+				<li class="header_nav_item"><a href="/journal/">Journal</a></li>
+				<li class="header_nav_item"><a href="/news/">News</a></li>
+			</ul>
+		</nav>
+		<!-- menu toggle (SP) -->
+		<button type="button" class="header_toggle js-toggle" aria-label="menu" aria-expanded="false">
+			<span></span><span></span><span></span>
+		</button>
+	</div>
+</header>
+<!-- ===== //header ===== -->

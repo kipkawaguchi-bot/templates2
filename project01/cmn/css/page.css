@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* ===========================================================
+ * page.css — ページ固有スタイル
+ * body.top のみ実装。下層ページはここに body.{page} 単位で追加。
+ * =========================================================== */
+
+/* ---------- top: hero ---------- */
+.top .sec_hero{padding:8rem 0;background:#fafafa}
+.top .sec_hero_ttl{font-size:4.8rem;margin-bottom:2.4rem;line-height:1.2}
+.top .sec_hero_txt{font-size:1.6rem;margin-bottom:3.2rem;color:#444}
+@media (max-width:767px){
+	.top .sec_hero{padding:6rem 0}
+	.top .sec_hero_ttl{font-size:3.2rem}
+}
+
+/* ---------- top: about ---------- */
+.top .sec_about{padding:8rem 0;border-bottom:1px solid var(--c-line)}
+.top .sec_about_ttl{margin-bottom:2.4rem}
+.top .sec_about_txt{max-width:72rem;color:#444}
+@media (max-width:767px){
+	.top .sec_about{padding:5.6rem 0}
+}
+
+/* ---------- top: news ---------- */
+.top .sec_news{padding:8rem 0}
+.top .sec_news_ttl{margin-bottom:3.2rem}
+.top .sec_news_list{display:flex;flex-direction:column;gap:1.6rem}
+.top .sec_news_item{padding-bottom:1.6rem;border-bottom:1px solid var(--c-line)}
+.top .sec_news_item a{display:block;font-size:1.5rem;transition:opacity .2s ease}
+.top .sec_news_item a:hover{opacity:.6}
+@media (max-width:767px){
+	.top .sec_news{padding:5.6rem 0}
+}
