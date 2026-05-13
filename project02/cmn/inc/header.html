@@ -1,0 +1,69 @@
+<header class="header_wrap">
+    <div class="header_in">
+        <?php if (isset($_SERVER["SCRIPT_NAME"]) && $_SERVER["SCRIPT_NAME"] === "/index.html"): ?>
+        <h1 class="header_logo">
+            <a href="/">
+                <picture>
+                    <source srcset="/cmn/webp/header_logo_gakkenkyo.webp" type="image/webp">
+                    <img src="/cmn/img/header_logo_gakkenkyo.png" width="160" height="40" alt="学研教室">
+                </picture>
+            </a>
+        </h1>
+        <?php else: ?>
+        <div class="header_logo">
+            <a href="/">
+                <picture>
+                    <source srcset="/cmn/webp/header_logo_gakkenkyo.webp" type="image/webp">
+                    <img src="/cmn/img/header_logo_gakkenkyo.png" width="160" height="40" alt="学研教室">
+                </picture>
+            </a>
+        </div>
+        <?php endif; ?>
+        <nav class="header_nav c-pc">
+            <ul class="header_nav_lst">
+                <li><a href="/about/">学研教室について</a></li>
+                <li><a href="/course/">コース紹介</a></li>
+                <li><a href="/materials/">教材紹介</a></li>
+                <li><a href="/fee/">月謝・料金</a></li>
+                <li><a href="/voice/">利用者の声</a></li>
+                <li><a href="/faq/">よくあるご質問</a></li>
+            </ul>
+        </nav>
+        <div class="header_cnt">
+            <a href="tel:0120000000" class="header_tel c-pc">
+                <picture>
+                    <source srcset="/cmn/webp/com_icn_teln.webp" type="image/webp">
+                    <img src="/cmn/img/com_icn_teln.png" width="20" height="20" alt="電話">
+                </picture>
+                <span>0120-000-000</span>
+            </a>
+            <a href="/contact/" class="header_inq c-pc">
+                <picture>
+                    <source srcset="/cmn/webp/com_icn_inq.webp" type="image/webp">
+                    <img src="/cmn/img/com_icn_inq.png" width="20" height="20" alt="お問い合わせ">
+                </picture>
+                <span>お問い合わせ</span>
+            </a>
+            <a href="/trial/" class="header_trial c-btn">
+                <span class="text">無料体験</span>
+            </a>
+            <button class="header_menu c-sp js-menu" type="button" aria-label="メニューを開く" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+    <div class="header_sp_nav js-spnav" aria-hidden="true">
+        <ul class="header_sp_lst">
+            <li><a href="/about/">学研教室について</a></li>
+            <li><a href="/course/">コース紹介</a></li>
+            <li><a href="/materials/">教材紹介</a></li>
+            <li><a href="/fee/">月謝・料金</a></li>
+            <li><a href="/voice/">利用者の声</a></li>
+            <li><a href="/faq/">よくあるご質問</a></li>
+            <li><a href="/contact/">お問い合わせ</a></li>
+            <li><a href="tel:0120000000">電話で問い合わせ</a></li>
+        </ul>
+    </div>
+</header>

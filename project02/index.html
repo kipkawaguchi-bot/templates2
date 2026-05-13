@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<?php require_once $_SERVER["DOCUMENT_ROOT"]. "/cmn/inc/head_top.html"; ?>
+<title>学研教室｜幼児・小学生・中学生のための学習教室</title>
+<meta name="description" content="学研教室は、幼児・小学生・中学生のための学習教室です。算数・国語・英語・プログラミングなど豊富なコースで「わかる」「できる」体験を提供します。">
+<meta name="keywords" content="学研教室,学習塾,幼児教育,小学生,中学生,算数,国語,英語,プログラミング">
+<link rel="canonical" href="https://example.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="学研教室｜幼児・小学生・中学生のための学習教室">
+<meta property="og:site_name" content="学研教室">
+<meta property="og:description" content="学研教室は、幼児・小学生・中学生のための学習教室です。">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://example.com/cmn/img/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="学研教室">
+<meta name="twitter:image" content="https://example.com/cmn/img/ogp.png">
+<?php require_once $_SERVER["DOCUMENT_ROOT"]. "/cmn/inc/head.html"; ?>
+</head>
+<body class="top">
+<?php require_once $_SERVER["DOCUMENT_ROOT"]. "/cmn/inc/header.html"; ?>
+<main class="main_wrap">
+
+    <!-- mv -->
+    <section class="mv_wrap">
+        <div class="mv_in c-wrap">
+            <div class="mv_box">
+                <p class="mv_lead">学研教室なら<br>幼児から中学生まで<br>子どもの未来が広がります</p>
+                <div class="mv_btns">
+                    <a href="/trial/" class="mv_btn is-main c-btn"><span class="text">無料体験学習に申し込む</span><span class="icn"></span></a>
+                    <a href="/search/" class="mv_btn is-sub c-btn"><span class="text">お近くの教室を探す</span><span class="icn"></span></a>
+                </div>
+            </div>
+            <div class="mv_img">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="/cmn/webp/sp/main01.webp" type="image/webp">
+                    <source media="(max-width: 768px)" srcset="/cmn/img/sp/main01.jpg">
+                    <source srcset="/cmn/webp/main01.webp" type="image/webp">
+                    <img src="/cmn/img/main01.jpg" width="600" height="600" alt="学研教室で学ぶ子ども" fetchpriority="high" decoding="async">
+                </picture>
+            </div>
+        </div>
+    </section>
+    <!-- /mv -->
+
+    <!-- service: 教材を探す（上部） -->
+    <section class="service_wrap" id="search">
+        <div class="c-wrap">
+            <h2 class="c-mds is-search">
+                <picture>
+                    <source srcset="/cmn/svg/ttl_search.svg" type="image/svg+xml">
+                    <img src="/cmn/svg/ttl_search.svg" width="240" height="32" alt="お近くの教室を探す">
+                </picture>
+            </h2>
+            <form class="search_box" action="/search/" method="get" role="search">
+                <div class="search_row">
+                    <label class="search_label" for="search_pref">都道府県</label>
+                    <div class="search_select">
+                        <select id="search_pref" name="pref">
+                            <option value="">選択してください</option>
+                            <option value="tokyo">東京都</option>
+                            <option value="kanagawa">神奈川県</option>
+                            <option value="osaka">大阪府</option>
+                            <option value="aichi">愛知県</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="search_row">
+                    <label class="search_label" for="search_keyword">キーワード</label>
+                    <input id="search_keyword" type="text" name="q" placeholder="駅名・住所・教室名で検索">
+                </div>
+                <button type="submit" class="search_btn">
+                    <picture>
+                        <source srcset="/cmn/webp/com_icn_search.webp" type="image/webp">
+                        <img src="/cmn/svg/icn_search.svg" width="20" height="20" alt="">
+                    </picture>
+                    <span>教室を探す</span>
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- /service -->
+
+    <!-- about: 学研教室の魅力 -->
+    <section class="about_wrap">
+        <div class="c-wrap">
+            <h2 class="c-mds">
+                <span class="is-en">Charm Point</span>
+                <span class="is-ja">学研教室の魅力</span>
+            </h2>
+            <ul class="charm_lst">
+                <li class="charm_item">
+                    <div class="charm_bg">
+                        <img src="/cmn/svg/charm_bg01.svg" width="280" height="280" alt="" loading="lazy">
+                    </div>
+                    <div class="charm_img">
+                        <picture>
+                            <source srcset="/cmn/webp/charm01.webp" type="image/webp">
+                            <img src="/cmn/img/charm01.png" width="200" height="200" alt="" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="charm_ttl">一人ひとりに<br>合わせた個別指導</h3>
+                    <p class="charm_txt">お子さま一人ひとりの理解度に合わせて、最適な教材と指導法でステップアップを応援します。</p>
+                </li>
+                <li class="charm_item">
+                    <div class="charm_bg">
+                        <img src="/cmn/svg/charm_bg02.svg" width="280" height="280" alt="" loading="lazy">
+                    </div>
+                    <div class="charm_img">
+                        <picture>
+                            <source srcset="/cmn/webp/charm02.webp" type="image/webp">
+                            <img src="/cmn/img/charm02.png" width="200" height="200" alt="" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="charm_ttl">考える力を伸ばす<br>オリジナル教材</h3>
+                    <p class="charm_txt">長年の指導ノウハウを活かした学研教室オリジナルの教材で、確かな学力と思考力を育てます。</p>
+                </li>
+                <li class="charm_item">
+                    <div class="charm_bg">
+                        <img src="/cmn/svg/charm_bg03.svg" width="280" height="280" alt="" loading="lazy">
+                    </div>
+                    <div class="charm_img">
+                        <picture>
+                            <source srcset="/cmn/webp/charm03.webp" type="image/webp">
+                            <img src="/cmn/img/charm03.png" width="200" height="200" alt="" loading="lazy">
+                        </picture>
+                    </div>
+                    <h3 class="charm_ttl">経験豊富な<br>先生がサポート</h3>
+                    <p class="charm_txt">研修を重ねた先生たちが、お子さまの「やる気」と「自信」を引き出します。</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- /about -->
+
+    <!-- content: 学年ごとの学習コース -->
+    <section class="course_wrap">
+        <div class="c-wrap">
+            <h2 class="c-mds">
+                <span class="is-en">Course</span>
+                <span class="is-ja">学年ごとの学習コース</span>
+            </h2>
+            <div class="course_tab js-tabs">
+                <button class="course_tab_btn is-active" data-tab="preschool" type="button">幼児</button>
+                <button class="course_tab_btn" data-tab="elementary" type="button">小学生</button>
+                <button class="course_tab_btn" data-tab="junior" type="button">中学生</button>
+            </div>
+            <ul class="course_lst">
+                <li class="course_item">
+                    <a href="/course/preschool/">
+                        <div class="course_img">
+                            <picture>
+                                <source srcset="/cmn/webp/course01.webp" type="image/webp">
+                                <img src="/cmn/img/course01.png" width="300" height="200" alt="" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="course_ttl">幼児コース</h3>
+                        <p class="course_txt">「もじ」「かず」「ちえ」をバランスよく学び、考える力の土台を育てます。</p>
+                        <span class="course_link">詳しく見る<span class="icn"></span></span>
+                    </a>
+                </li>
+                <li class="course_item">
+                    <a href="/course/elementary/">
+                        <div class="course_img">
+                            <picture>
+                                <source srcset="/cmn/webp/course02.webp" type="image/webp">
+                                <img src="/cmn/img/course02.png" width="300" height="200" alt="" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="course_ttl">小学生コース</h3>
+                        <p class="course_txt">算数・国語・英語を中心に、自学自習で「わかる」「できる」を実感できます。</p>
+                        <span class="course_link">詳しく見る<span class="icn"></span></span>
+                    </a>
+                </li>
+                <li class="course_item">
+                    <a href="/course/junior/">
+                        <div class="course_img">
+                            <picture>
+                                <source srcset="/cmn/webp/course03.webp" type="image/webp">
+                                <img src="/cmn/img/course03.png" width="300" height="200" alt="" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="course_ttl">中学生コース</h3>
+                        <p class="course_txt">定期テスト・高校受験に向け、英・数・国・理・社を本格的に学びます。</p>
+                        <span class="course_link">詳しく見る<span class="icn"></span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- /content -->
+
+    <!-- content: 学研教室のオリジナル教材 -->
+    <section class="materials_wrap">
+        <div class="c-wrap">
+            <h2 class="c-mds">
+                <span class="is-en">Materials</span>
+                <span class="is-ja">学研教室のオリジナル教材</span>
+            </h2>
+            <ul class="materials_lst">
+                <li class="materials_item is-arithmetic">
+                    <div class="materials_head">
+                        <div class="materials_icn">
+                            <picture>
+                                <source srcset="/cmn/webp/materials_arithmetic.webp" type="image/webp">
+                                <img src="/cmn/img/materials_arithmetic.png" width="80" height="80" alt="" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="materials_ttl">算数</h3>
+                    </div>
+                    <p class="materials_txt">スモールステップで「数の感覚」を育て、思考力と計算力をバランスよく伸ばします。</p>
+                    <div class="materials_imgs">
+                        <picture>
+                            <source srcset="/cmn/webp/materials_shougaku_math_grade9_img01n.webp" type="image/webp">
+                            <img src="/cmn/img/materials_shougaku_math_grade9_img01n.png" width="180" height="240" alt="算数教材のサンプル" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="/cmn/webp/materials_shougaku_math_grade9_img02n.webp" type="image/webp">
+                            <img src="/cmn/img/materials_shougaku_math_grade9_img02n.png" width="180" height="240" alt="算数教材のサンプル" loading="lazy">
+                        </picture>
+                    </div>
+                    <a href="/materials/arithmetic/" class="materials_btn c-btn"><span class="text">算数教材を見る</span><span class="icn"></span></a>
+                </li>
+                <li class="materials_item is-language">
+                    <div class="materials_head">
+                        <div class="materials_icn">
+                            <picture>
+                                <source srcset="/cmn/webp/materials_language.webp" type="image/webp">
+                                <img src="/cmn/img/materials_language.png" width="80" height="80" alt="" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="materials_ttl">国語</h3>
+                    </div>
+                    <p class="materials_txt">「読む」「書く」「考える」をバランスよく学び、すべての学習の土台を作ります。</p>
+                    <div class="materials_imgs">
+                        <picture>
+                            <source srcset="/cmn/webp/materials_shgk_kokugo_grade9_dokkai2.webp" type="image/webp">
+                            <img src="/cmn/img/materials_shgk_kokugo_grade9_dokkai2.png" width="180" height="240" alt="国語教材のサンプル" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="/cmn/webp/materials_shgk_kokugo_grade9_kanji2.webp" type="image/webp">
+                            <img src="/cmn/img/materials_shgk_kokugo_grade9_kanji2.png" width="180" height="240" alt="国語教材のサンプル" loading="lazy">
+                        </picture>
+                    </div>
+                    <a href="/materials/language/" class="materials_btn c-btn"><span class="text">国語教材を見る</span><span class="icn"></span></a>
+                </li>
+                <li class="materials_item is-english">
+                    <div class="materials_head">
+                        <div class="materials_icn">
+                            <picture>
+                                <source srcset="/cmn/webp/materials_english.webp" type="image/webp">
+                                <img src="/cmn/img/materials_english.png" width="80" height="80" alt="" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="materials_ttl">英語</h3>
+                    </div>
+                    <p class="materials_txt">聞く・話す・読む・書くの4技能を、楽しく身につけられる工夫が満載の教材です。</p>
+                    <div class="materials_imgs">
+                        <picture>
+                            <source srcset="/cmn/webp/materials_shougaku_shou1_eng05.webp" type="image/webp">
+                            <img src="/cmn/img/materials_shougaku_shou1_eng05.png" width="180" height="240" alt="英語教材のサンプル" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="/cmn/webp/materials_shougaku_shou1_eng06.webp" type="image/webp">
+                            <img src="/cmn/img/materials_shougaku_shou1_eng06.png" width="180" height="240" alt="英語教材のサンプル" loading="lazy">
+                        </picture>
+                    </div>
+                    <a href="/materials/english/" class="materials_btn c-btn"><span class="text">英語教材を見る</span><span class="icn"></span></a>
+                </li>
+                <li class="materials_item is-digital">
+                    <div class="materials_head">
+                        <div class="materials_icn">
+                            <picture>
+                                <source srcset="/cmn/webp/materials_digital.webp" type="image/webp">
+                                <img src="/cmn/img/materials_digital.png" width="80" height="80" alt="" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="materials_ttl">デジタル教材</h3>
+                    </div>
+                    <p class="materials_txt">タブレットや専用アプリを使い、楽しみながら学べるデジタル教材も充実しています。</p>
+                    <div class="materials_imgs">
+                        <picture>
+                            <source srcset="/cmn/webp/materials_shougaku_shou1_eng10n.webp" type="image/webp">
+                            <img src="/cmn/img/materials_shougaku_shou1_eng10n.png" width="180" height="240" alt="デジタル教材のサンプル" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="/cmn/webp/materials_shougaku_shou1_eng11.webp" type="image/webp">
+                            <img src="/cmn/img/materials_shougaku_shou1_eng11.png" width="180" height="240" alt="デジタル教材のサンプル" loading="lazy">
+                        </picture>
+                    </div>
+                    <a href="/materials/digital/" class="materials_btn c-btn"><span class="text">デジタル教材を見る</span><span class="icn"></span></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- /content -->
+
+    <!-- content: 月謝 -->
+    <section class="fee_wrap">
+        <div class="c-wrap">
+            <h2 class="c-mds">
+                <span class="is-en">Fee</span>
+                <span class="is-ja">幼児・小学生の学習教室の月謝</span>
+            </h2>
+            <ul class="fee_lst">
+                <li class="fee_item is-preschool">
+                    <p class="fee_label">幼児コース</p>
+                    <p class="fee_price"><span class="num">8,800</span><span class="unit">円／月</span></p>
+                    <p class="fee_note">※週1回／2教科の場合（税込）</p>
+                </li>
+                <li class="fee_item is-elementary">
+                    <p class="fee_label">小学生コース</p>
+                    <p class="fee_price"><span class="num">14,300</span><span class="unit">円／月</span></p>
+                    <p class="fee_note">※週2回／2教科の場合（税込）</p>
+                </li>
+            </ul>
+            <a href="/fee/" class="fee_btn c-btn"><span class="text">月謝・料金の詳細を見る</span><span class="icn"></span></a>
+        </div>
+    </section>
+    <!-- /content -->
+
+    <!-- service: 教材を探す（下部） -->
+    <section class="service_wrap is-bottom">
+        <div class="c-wrap">
+            <h2 class="c-mds is-search">
+                <picture>
+                    <source srcset="/cmn/svg/ttl_search.svg" type="image/svg+xml">
+                    <img src="/cmn/svg/ttl_search.svg" width="240" height="32" alt="お近くの教室を探す">
+                </picture>
+            </h2>
+            <form class="search_box" action="/search/" method="get" role="search">
+                <div class="search_row">
+                    <label class="search_label" for="search_pref2">都道府県</label>
+                    <div class="search_select">
+                        <select id="search_pref2" name="pref">
+                            <option value="">選択してください</option>
+                            <option value="tokyo">東京都</option>
+                            <option value="kanagawa">神奈川県</option>
+                            <option value="osaka">大阪府</option>
+                            <option value="aichi">愛知県</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="search_row">
+                    <label class="search_label" for="search_keyword2">キーワード</label>
+                    <input id="search_keyword2" type="text" name="q" placeholder="駅名・住所・教室名で検索">
+                </div>
+                <button type="submit" class="search_btn">
+                    <picture>
+                        <source srcset="/cmn/webp/com_icn_search.webp" type="image/webp">
+                        <img src="/cmn/svg/icn_search.svg" width="20" height="20" alt="">
+                    </picture>
+                    <span>教室を探す</span>
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- /service -->
+
+    <!-- contact: よくあるご質問 -->
+    <section class="faq_wrap">
+        <div class="c-wrap">
+            <h2 class="c-mds">
+                <span class="is-en">FAQ</span>
+                <span class="is-ja">よくあるご質問</span>
+            </h2>
+            <ul class="faq_lst js-faq">
+                <li class="faq_item">
+                    <button class="faq_q" type="button" aria-expanded="false">
+                        <span class="mark">Q</span>
+                        <span class="text">体験学習はできますか？</span>
+                        <span class="icn"></span>
+                    </button>
+                    <div class="faq_a" hidden>
+                        <span class="mark">A</span>
+                        <p class="text">はい、無料体験学習を実施しています。お近くの教室にお気軽にお問い合わせください。</p>
+                    </div>
+                </li>
+                <li class="faq_item">
+                    <button class="faq_q" type="button" aria-expanded="false">
+                        <span class="mark">Q</span>
+                        <span class="text">何歳から始められますか？</span>
+                        <span class="icn"></span>
+                    </button>
+                    <div class="faq_a" hidden>
+                        <span class="mark">A</span>
+                        <p class="text">幼児コースは3歳（年少）から始められます。お子さまの様子を見ながら、最適なタイミングでご検討ください。</p>
+                    </div>
+                </li>
+                <li class="faq_item">
+                    <button class="faq_q" type="button" aria-expanded="false">
+                        <span class="mark">Q</span>
+                        <span class="text">入会金はかかりますか？</span>
+                        <span class="icn"></span>
+                    </button>
+                    <div class="faq_a" hidden>
+                        <span class="mark">A</span>
+                        <p class="text">入会金は5,500円（税込）です。キャンペーン期間中は無料となる場合があります。</p>
+                    </div>
+                </li>
+                <li class="faq_item">
+                    <button class="faq_q" type="button" aria-expanded="false">
+                        <span class="mark">Q</span>
+                        <span class="text">途中から教科を増やすことはできますか？</span>
+                        <span class="icn"></span>
+                    </button>
+                    <div class="faq_a" hidden>
+                        <span class="mark">A</span>
+                        <p class="text">はい、途中からの教科追加も可能です。担当の先生にご相談ください。</p>
+                    </div>
+                </li>
+            </ul>
+            <a href="/faq/" class="faq_btn c-btn"><span class="text">よくあるご質問を全て見る</span><span class="icn"></span></a>
+        </div>
+    </section>
+    <!-- /contact -->
+
+<?php require_once $_SERVER["DOCUMENT_ROOT"]. "/cmn/inc/cv.html"; ?>
+</main>
+<?php require_once $_SERVER["DOCUMENT_ROOT"]. "/cmn/inc/footer.html"; ?>
+</body>
+</html>

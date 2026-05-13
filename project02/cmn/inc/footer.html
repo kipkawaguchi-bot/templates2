@@ -1,0 +1,47 @@
+<footer class="footer_wrap">
+    <div class="footer_in">
+        <div class="footer_head">
+            <div class="footer_logo">
+                <a href="/">
+                    <picture>
+                        <source srcset="/cmn/webp/footer_logo_gakken.webp" type="image/webp">
+                        <img src="/cmn/img/footer_logo_gakken.png" width="160" height="40" alt="学研教室">
+                    </picture>
+                </a>
+            </div>
+            <?php require_once $_SERVER["DOCUMENT_ROOT"]. "/cmn/inc/sns.html"; ?>
+        </div>
+        <?php require_once $_SERVER["DOCUMENT_ROOT"]. "/cmn/inc/footer_nav.html"; ?>
+        <div class="footer_bottom">
+            <ul class="footer_sublinks">
+                <li><a href="/privacy/">プライバシーポリシー</a></li>
+                <li><a href="/terms/">利用規約</a></li>
+                <li><a href="/sitemap/">サイトマップ</a></li>
+                <li>
+                    <a href="https://www.gakken.co.jp/" target="_blank" rel="noopener">
+                        Gakken グループ
+                        <picture>
+                            <source srcset="/cmn/webp/footer_icn_new_window.webp" type="image/webp">
+                            <img src="/cmn/img/footer_icn_new_window.png" width="14" height="14" alt="">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+            <div class="footer_group_logo">
+                <picture>
+                    <source srcset="/cmn/webp/footer_logo_gakken_group.webp" type="image/webp">
+                    <img src="/cmn/img/footer_logo_gakken_group.png" width="160" height="32" alt="Gakken Group">
+                </picture>
+            </div>
+            <p class="footer_copy">&copy; Gakken 教室. All Rights Reserved.</p>
+        </div>
+    </div>
+    <button class="footer_returntop js-returntop" type="button" aria-label="ページの先頭へ戻る">
+        <picture>
+            <source srcset="/cmn/webp/com_btn_returntop.webp" type="image/webp">
+            <img src="/cmn/img/com_btn_returntop.png" width="48" height="48" alt="">
+        </picture>
+    </button>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="/cmn/js/script.js"></script>

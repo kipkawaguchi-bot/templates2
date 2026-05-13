@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/* =============================================================
+ * common.css — reset + 共通パーツ（ヘッダー / フッター / ボタン）
+ * 色設計：学研テーマ（緑 #00a060 / オレンジCTA #ff8a00 / 背景緑 #e8f5ec）
+ * ============================================================= */
+
+/* ---------- @font-face ---------- */
+/* 英字: Montserrat（SemiBold/Bold）— 英字・数字に優先適用 */
+@font-face{
+  font-family:"Montserrat";
+  src:url("/cmn/font/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight:600;
+  font-style:normal;
+  font-display:swap;
+  unicode-range:U+0020-007F,U+00A0-00FF,U+2000-206F,U+2070-209F,U+20A0-20CF;
+}
+@font-face{
+  font-family:"Montserrat";
+  src:url("/cmn/font/Montserrat-Bold.woff2") format("woff2");
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+  unicode-range:U+0020-007F,U+00A0-00FF,U+2000-206F,U+2070-209F,U+20A0-20CF;
+}
+/* 日本語: Noto Sans JP（Variable, wght 100-900）— 本文・見出しのベース */
+@font-face{
+  font-family:"Noto Sans JP";
+  src:url("/cmn/font/NotoSansJP-VariableFont_wght.woff2") format("woff2-variations"),
+      url("/cmn/font/NotoSansJP-VariableFont_wght.woff2") format("woff2");
+  font-weight:100 900;
+  font-style:normal;
+  font-display:swap;
+}
+
+/* ---------- reset ---------- */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:62.5%;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Montserrat","Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic Medium",Meiryo,system-ui,sans-serif;font-size:1.6rem;line-height:1.7;color:#222;background:#fff;font-feature-settings:"palt"}
+img,picture,svg{max-width:100%;height:auto;vertical-align:bottom}
+ul,ol{list-style:none}
+a{color:inherit;text-decoration:none;transition:opacity .2s ease}
+a:hover{opacity:.7}
+button{background:none;border:0;font:inherit;color:inherit;cursor:pointer}
+input,select,textarea{font:inherit;color:inherit}
+section,header,footer,nav,main,article{display:block}
+
+/* ---------- 表示切替ユーティリティ ---------- */
+.c-pc{display:block}
+.c-sp{display:none}
+@media (max-width:768px){
+  .c-pc{display:none}
+  .c-sp{display:block}
+}
+
+/* ---------- レイアウト ---------- */
+.c-wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+@media (max-width:768px){
+  .c-wrap{padding:0 5.128vw}
+}
+
+/* ---------- 共通見出し ---------- */
+.c-mds{text-align:center;margin:0 auto 40px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.c-mds .is-en{font-size:3.2rem;font-weight:700;color:#00a060;letter-spacing:.08em;line-height:1}
+.c-mds .is-ja{font-size:2.4rem;font-weight:700;color:#222;line-height:1.4}
+.c-mds.is-search{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:12px;color:#00a060;font-size:2.4rem;font-weight:700}
+.c-mds.is-search img{height:32px;width:auto}
+@media (max-width:768px){
+  .c-mds{margin-bottom:6.41vw}
+  .c-mds .is-en{font-size:2.4rem}
+  .c-mds .is-ja{font-size:1.8rem}
+  .c-mds.is-search{font-size:1.8rem}
+  .c-mds.is-search img{height:24px}
+}
+
+/* ---------- 共通ボタン ---------- */
+.c-btn{display:inline-block}
+.c-btn > a,
+a.c-btn,
+.c-btn{position:relative}
+.c-btn a,
+a.c-btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  min-width:280px;
+  padding:16px 28px;
+  background:#ff8a00;
+  color:#fff;
+  font-size:1.6rem;
+  font-weight:700;
+  border-radius:999px;
+  box-shadow:0 4px 0 #c66c00;
+  transition:transform .15s ease, box-shadow .15s ease, opacity .2s ease;
+  text-align:center;
+}
+.c-btn a:hover,
+a.c-btn:hover{transform:translateY(2px);box-shadow:0 2px 0 #c66c00;opacity:1}
+.c-btn .icn{
+  display:inline-block;
+  width:20px;
+  height:20px;
+  background:url(/cmn/svg/arw_arrow_r.svg) no-repeat center/contain;
+}
+.c-btn.is-sub a,
+a.c-btn.is-sub{
+  background:#fff;
+  color:#00a060;
+  border:2px solid #00a060;
+  box-shadow:0 4px 0 #007a48;
+}
+.c-btn.is-sub .icn{background-image:url(/cmn/svg/arw_arrow_r_green.svg)}
+
+/* ---------- ヘッダー ---------- */
+.header_wrap{position:sticky;top:0;left:0;width:100%;background:#fff;z-index:100;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.header_in{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:12px 24px;gap:24px}
+.header_logo a{display:block}
+.header_logo img{height:40px;width:auto}
+.header_nav_lst{display:flex;align-items:center;gap:24px;font-size:1.4rem;font-weight:700}
+.header_nav_lst a{display:inline-block;padding:8px 0;color:#222}
+.header_nav_lst a:hover{color:#00a060;opacity:1}
+.header_cnt{display:flex;align-items:center;gap:16px}
+.header_tel,.header_inq{display:inline-flex;align-items:center;gap:6px;font-size:1.3rem;font-weight:700;color:#00a060}
+.header_tel span{font-family:"Montserrat",system-ui,sans-serif;letter-spacing:.02em}
+.header_tel img,.header_inq img{width:18px;height:18px}
+.header_trial{display:inline-block}
+.header_trial.c-btn{padding:0}
+.header_trial.c-btn,
+a.header_trial.c-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:auto;
+  padding:10px 20px;
+  background:#ff8a00;
+  color:#fff;
+  font-size:1.4rem;
+  font-weight:700;
+  border-radius:999px;
+  box-shadow:0 3px 0 #c66c00;
+}
+.header_trial .text{display:inline-block}
+.header_menu{
+  display:none;
+  width:40px;height:40px;
+  position:relative;
+}
+.header_menu span{
+  position:absolute;left:8px;width:24px;height:2px;background:#00a060;transition:transform .2s ease, opacity .2s ease, top .2s ease;
+}
+.header_menu span:nth-child(1){top:12px}
+.header_menu span:nth-child(2){top:19px}
+.header_menu span:nth-child(3){top:26px}
+.header_menu.is-open span:nth-child(1){top:19px;transform:rotate(45deg)}
+.header_menu.is-open span:nth-child(2){opacity:0}
+.header_menu.is-open span:nth-child(3){top:19px;transform:rotate(-45deg)}
+
+.header_sp_nav{
+  position:fixed;top:64px;left:0;width:100%;height:calc(100vh - 64px);
+  background:#fff;padding:24px;overflow-y:auto;
+  transform:translateX(100%);transition:transform .3s ease;
+}
+.header_sp_nav.is-open{transform:translateX(0)}
+.header_sp_lst li{border-bottom:1px solid #e0e0e0}
+.header_sp_lst a{display:block;padding:16px 8px;font-size:1.6rem;font-weight:700;color:#222}
+
+@media (max-width:768px){
+  .header_in{padding:10px 5.128vw;gap:12px}
+  .header_logo img{height:32px}
+  .header_trial.c-btn,
+  a.header_trial.c-btn{padding:8px 14px;font-size:1.2rem}
+  .header_menu{display:block}
+}
+
+/* ---------- フッター ---------- */
+.footer_wrap{position:relative;background:#1a4d2e;color:#fff;padding:60px 0 24px;margin-top:80px}
+.footer_in{max-width:1200px;margin:0 auto;padding:0 24px}
+.footer_head{display:flex;justify-content:space-between;align-items:center;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.15)}
+.footer_logo img{height:48px;width:auto;filter:brightness(0) invert(1)}
+.footer_nav{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding:40px 0}
+.footer_nav_ttl{font-size:1.5rem;font-weight:700;margin-bottom:12px}
+.footer_nav_ttl a{color:#fff}
+.footer_nav_lst li{margin-bottom:8px}
+.footer_nav_lst a{font-size:1.3rem;color:rgba(255,255,255,.85)}
+.footer_bottom{padding-top:24px;border-top:1px solid rgba(255,255,255,.15)}
+.footer_sublinks{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:1.2rem;margin-bottom:16px}
+.footer_sublinks a{display:inline-flex;align-items:center;gap:4px;color:rgba(255,255,255,.85)}
+.footer_sublinks img{filter:brightness(0) invert(1)}
+.footer_group_logo img{height:32px;width:auto;filter:brightness(0) invert(1);opacity:.9}
+.footer_copy{font-size:1.2rem;color:rgba(255,255,255,.7);margin-top:16px}
+
+.sns_lst{display:flex;gap:12px}
+.sns_lst a{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);
+}
+.sns_lst img{width:20px;height:20px}
+
+.footer_returntop{
+  position:fixed;right:20px;bottom:20px;width:48px;height:48px;
+  z-index:90;opacity:0;pointer-events:none;transition:opacity .25s ease;
+}
+.footer_returntop.is-show{opacity:1;pointer-events:auto}
+.footer_returntop img{width:48px;height:48px}
+
+@media (max-width:768px){
+  .footer_wrap{padding:40px 0 20px;margin-top:60px}
+  .footer_in{padding:0 5.128vw}
+  .footer_head{flex-direction:column;align-items:flex-start;gap:20px}
+  .footer_nav{grid-template-columns:repeat(2,1fr);gap:24px;padding:24px 0}
+  .footer_copy{text-align:center}
+}
+
+/* ---------- CV セクション（全ページ共通） ---------- */
+.cv_wrap{background:#e8f5ec;padding:60px 24px;text-align:center;margin-top:60px}
+.cv_in{max-width:800px;margin:0 auto}
+.cv_ttl{font-size:2.8rem;font-weight:700;color:#00a060;line-height:1.5;margin-bottom:16px}
+.cv_txt{font-size:1.5rem;line-height:1.8;margin-bottom:32px;color:#333}
+.cv_btns{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:32px}
+.cv_tel{margin-top:16px}
+.cv_tel_ttl{font-size:1.4rem;font-weight:700;margin-bottom:8px;color:#333}
+.cv_tel_num{display:inline-flex;align-items:center;gap:10px;font-family:"Montserrat",system-ui,sans-serif;font-size:3.2rem;font-weight:700;color:#00a060;line-height:1}
+.cv_tel_num img{width:32px;height:32px}
+.cv_tel_sub{font-size:1.2rem;color:#666;margin-top:8px}
+
+@media (max-width:768px){
+  .cv_wrap{padding:10.256vw 5.128vw}
+  .cv_ttl{font-size:2.2rem}
+  .cv_tel_num{font-size:2.4rem}
+  .cv_btns .c-btn a{min-width:auto;width:100%}
+  .cv_btns{flex-direction:column}
+}

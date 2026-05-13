@@ -1,0 +1,273 @@
+@charset "UTF-8";
+/* =============================================================
+ * top.css — TOPページ専用スタイル
+ * 構成: mv / service / about / course / materials / fee / service2 / faq
+ * ============================================================= */
+
+body.top{padding-top:0}
+
+/* ---------- font 個別指定（英字・数字専用） ---------- */
+.c-mds .is-en,
+.fee_price .num,
+.fee_price .unit{
+  font-family:"Montserrat",system-ui,sans-serif;
+}
+
+/* ---------- mv ---------- */
+.mv_wrap{
+  background:linear-gradient(180deg,#e8f5ec 0%,#fff 100%);
+  padding:40px 0 60px;
+}
+.mv_wrap .c-wrap{display:flex;align-items:center;justify-content:space-between;gap:48px}
+.mv_box{flex:1;max-width:560px}
+.mv_lead{
+  font-size:3.6rem;
+  font-weight:700;
+  color:#1a4d2e;
+  line-height:1.5;
+  letter-spacing:-.01em;
+  margin-bottom:32px;
+}
+.mv_btns{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.mv_btns .c-btn{display:block}
+.mv_btn.is-main a,
+a.mv_btn.is-main{min-width:340px}
+.mv_img{flex:0 0 auto;width:42%;max-width:480px}
+.mv_img img{
+  width:100%;height:auto;border-radius:24px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+@media (max-width:768px){
+  .mv_wrap{padding:5.128vw 0 7.692vw}
+  .mv_wrap .c-wrap{flex-direction:column;gap:24px}
+  .mv_box{order:2;width:100%}
+  .mv_lead{font-size:2.4rem;text-align:center;margin-bottom:5.128vw}
+  .mv_btns{align-items:stretch}
+  .mv_btn.is-main a,
+  a.mv_btn.is-main,
+  .mv_btn.is-sub a,
+  a.mv_btn.is-sub{min-width:auto;width:100%}
+  .mv_img{order:1;width:75%;margin:0 auto}
+}
+
+/* ---------- service (検索) ---------- */
+.service_wrap{padding:60px 0;background:#fff}
+.service_wrap.is-bottom{padding:30px 0 60px;background:#fafafa}
+.search_box{
+  max-width:880px;margin:0 auto;
+  background:#fff;border:2px solid #00a060;border-radius:16px;padding:32px;
+  display:flex;flex-direction:column;gap:16px;
+  box-shadow:0 4px 16px rgba(0,160,96,.08);
+}
+.search_row{display:flex;align-items:center;gap:16px}
+.search_label{
+  flex:0 0 120px;
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:6px 12px;background:#e8f5ec;color:#00a060;font-size:1.3rem;font-weight:700;border-radius:6px;
+}
+.search_select{flex:1;position:relative}
+.search_select::after{
+  content:'';position:absolute;right:16px;top:50%;width:12px;height:8px;
+  background:url(/cmn/svg/arw_arrow_d.svg) no-repeat center/contain;
+  transform:translateY(-50%);pointer-events:none;
+}
+.search_select select,
+.search_box input[type="text"]{
+  width:100%;padding:12px 16px;border:1px solid #cfe5d5;border-radius:8px;
+  font-size:1.5rem;background:#fff;appearance:none;
+}
+.search_select select{padding-right:40px}
+.search_btn{
+  display:inline-flex;justify-content:center;align-items:center;gap:10px;
+  margin:8px auto 0;padding:14px 40px;
+  background:#ff8a00;color:#fff;font-size:1.6rem;font-weight:700;
+  border-radius:999px;box-shadow:0 4px 0 #c66c00;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.search_btn:hover{transform:translateY(2px);box-shadow:0 2px 0 #c66c00}
+.search_btn img{filter:brightness(0) invert(1);width:20px;height:20px}
+
+@media (max-width:768px){
+  .service_wrap{padding:10.256vw 0}
+  .search_box{padding:5.128vw;gap:3.077vw}
+  .search_row{flex-direction:column;align-items:stretch;gap:6px}
+  .search_label{flex:none;align-self:flex-start}
+}
+
+/* ---------- about (学研教室の魅力) ---------- */
+.about_wrap{padding:80px 0;background:#e8f5ec}
+.charm_lst{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.charm_item{
+  position:relative;
+  background:#fff;border-radius:24px;padding:32px 24px 28px;
+  text-align:center;
+  box-shadow:0 4px 16px rgba(0,0,0,.05);
+}
+.charm_bg{
+  position:absolute;top:-30px;right:-20px;
+  width:120px;opacity:.4;z-index:0;pointer-events:none;
+}
+.charm_bg img{width:100%;height:auto}
+.charm_img{position:relative;width:140px;margin:0 auto 16px;z-index:1}
+.charm_img img{width:100%;height:auto;border-radius:50%}
+.charm_ttl{
+  position:relative;z-index:1;
+  font-size:2rem;font-weight:700;color:#00a060;line-height:1.4;margin-bottom:12px;
+}
+.charm_txt{
+  position:relative;z-index:1;
+  font-size:1.4rem;line-height:1.8;color:#333;text-align:left;
+}
+
+@media (max-width:768px){
+  .about_wrap{padding:10.256vw 0}
+  .charm_lst{grid-template-columns:1fr;gap:5.128vw}
+  .charm_item{padding:6.41vw 5.128vw}
+  .charm_img{width:120px}
+}
+
+/* ---------- course (学年ごとの学習コース) ---------- */
+.course_wrap{padding:80px 0;background:#fff}
+.course_tab{
+  display:flex;justify-content:center;gap:8px;
+  margin:0 auto 32px;
+  background:#f1f7f3;padding:6px;border-radius:999px;width:fit-content;
+}
+.course_tab_btn{
+  padding:10px 28px;font-size:1.5rem;font-weight:700;color:#666;border-radius:999px;
+  transition:background .2s ease, color .2s ease;
+}
+.course_tab_btn.is-active{background:#00a060;color:#fff}
+.course_lst{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.course_item{
+  background:#fff;border:2px solid #e8f5ec;border-radius:20px;overflow:hidden;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.course_item:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,160,96,.12)}
+.course_item a{display:block;padding:0 0 24px;color:inherit}
+.course_item a:hover{opacity:1}
+.course_img{aspect-ratio:3/2;overflow:hidden;background:#e8f5ec}
+.course_img img{width:100%;height:100%;object-fit:cover}
+.course_ttl{font-size:2rem;font-weight:700;color:#00a060;margin:20px 24px 12px}
+.course_txt{font-size:1.4rem;line-height:1.7;color:#333;margin:0 24px 16px}
+.course_link{
+  display:inline-flex;align-items:center;gap:8px;
+  margin:0 24px;color:#ff8a00;font-size:1.4rem;font-weight:700;
+}
+.course_link .icn{
+  display:inline-block;width:16px;height:16px;
+  background:url(/cmn/svg/arw_arrow_r.svg) no-repeat center/contain;
+}
+
+@media (max-width:768px){
+  .course_wrap{padding:10.256vw 0}
+  .course_tab{margin-bottom:5.128vw}
+  .course_tab_btn{padding:8px 16px;font-size:1.3rem}
+  .course_lst{grid-template-columns:1fr;gap:4.103vw}
+}
+
+/* ---------- materials (オリジナル教材) ---------- */
+.materials_wrap{padding:80px 0;background:#fafafa}
+.materials_lst{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.materials_item{
+  background:#fff;border-radius:20px;padding:28px;
+  box-shadow:0 4px 16px rgba(0,0,0,.05);
+  display:flex;flex-direction:column;
+}
+.materials_head{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.materials_icn{
+  width:64px;height:64px;flex:0 0 auto;
+  border-radius:50%;background:#e8f5ec;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.materials_icn img{width:48px;height:48px;object-fit:contain}
+.materials_ttl{font-size:2rem;font-weight:700;color:#00a060}
+.materials_txt{font-size:1.4rem;line-height:1.8;color:#333;margin-bottom:20px}
+.materials_imgs{display:flex;gap:12px;justify-content:center;margin-bottom:24px;padding:16px;background:#fafafa;border-radius:12px}
+.materials_imgs picture{flex:1;max-width:50%}
+.materials_imgs img{width:100%;height:auto;border:1px solid #e0e0e0;border-radius:4px}
+.materials_btn{align-self:center;margin-top:auto}
+
+.materials_item.is-arithmetic .materials_icn{background:#ffe9d6}
+.materials_item.is-arithmetic .materials_ttl{color:#ff8a00}
+.materials_item.is-language .materials_icn{background:#fde2ea}
+.materials_item.is-language .materials_ttl{color:#e0427a}
+.materials_item.is-english .materials_icn{background:#e2efff}
+.materials_item.is-english .materials_ttl{color:#3c7be0}
+.materials_item.is-digital .materials_icn{background:#ede2ff}
+.materials_item.is-digital .materials_ttl{color:#7e3cd0}
+
+@media (max-width:768px){
+  .materials_wrap{padding:10.256vw 0}
+  .materials_lst{grid-template-columns:1fr;gap:4.103vw}
+  .materials_item{padding:5.128vw}
+}
+
+/* ---------- fee (月謝) ---------- */
+.fee_wrap{padding:80px 0;background:#fff;text-align:center}
+.fee_lst{display:flex;justify-content:center;gap:24px;margin:0 auto 32px;flex-wrap:wrap}
+.fee_item{
+  flex:0 0 320px;
+  padding:32px 24px;
+  border-radius:20px;
+  text-align:center;
+  position:relative;
+  color:#fff;
+}
+.fee_item.is-preschool{background:#00a060}
+.fee_item.is-elementary{background:#ff8a00}
+.fee_label{
+  display:inline-block;
+  padding:6px 16px;background:rgba(255,255,255,.2);border-radius:999px;
+  font-size:1.4rem;font-weight:700;margin-bottom:12px;
+}
+.fee_price{display:flex;align-items:baseline;justify-content:center;gap:4px;margin-bottom:8px}
+.fee_price .num{font-size:4.8rem;font-weight:700;line-height:1}
+.fee_price .unit{font-size:1.6rem;font-weight:700}
+.fee_note{font-size:1.2rem;opacity:.9}
+
+@media (max-width:768px){
+  .fee_wrap{padding:10.256vw 0}
+  .fee_lst{flex-direction:column;align-items:center;gap:4.103vw}
+  .fee_item{flex:none;width:100%;max-width:360px;padding:5.128vw}
+  .fee_price .num{font-size:3.6rem}
+}
+
+/* ---------- faq (よくあるご質問) ---------- */
+.faq_wrap{padding:80px 0;background:#fafafa;text-align:center}
+.faq_lst{max-width:800px;margin:0 auto 32px;text-align:left}
+.faq_item{
+  background:#fff;border-radius:12px;margin-bottom:12px;overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+.faq_q,.faq_a{display:flex;align-items:flex-start;gap:16px;padding:20px 24px}
+.faq_q{
+  width:100%;text-align:left;font-size:1.5rem;font-weight:700;color:#222;
+  position:relative;align-items:center;
+}
+.faq_q .mark{
+  flex:0 0 32px;width:32px;height:32px;border-radius:50%;
+  background:#00a060;color:#fff;display:inline-flex;align-items:center;justify-content:center;
+  font-size:1.4rem;font-weight:700;
+}
+.faq_q .text{flex:1}
+.faq_q .icn{
+  flex:0 0 16px;width:16px;height:16px;
+  background:url(/cmn/svg/arw_arrow_d.svg) no-repeat center/contain;
+  transition:transform .25s ease;
+}
+.faq_q[aria-expanded="true"] .icn{transform:rotate(180deg)}
+.faq_a{background:#f1f7f3;align-items:flex-start;border-top:1px solid #cfe5d5}
+.faq_a .mark{
+  flex:0 0 32px;width:32px;height:32px;border-radius:50%;
+  background:#ff8a00;color:#fff;display:inline-flex;align-items:center;justify-content:center;
+  font-size:1.4rem;font-weight:700;
+}
+.faq_a .text{flex:1;font-size:1.4rem;line-height:1.8;color:#333}
+
+@media (max-width:768px){
+  .faq_wrap{padding:10.256vw 0}
+  .faq_q,.faq_a{padding:4.103vw}
+  .faq_q .text{font-size:1.4rem}
+}
