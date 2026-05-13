@@ -1,0 +1,44 @@
+<!-- Google タグ マネージャー -->
+<!-- (ここまで) Google タグ マネージャー -->
+<header>
+    <div class="header_in">
+        <?php if ($_SERVER["SCRIPT_NAME"] !== "/index.html"): ?>
+        <div class="header_logo"><a href="#"><img src="/cmn/svg/logo.svg" width="200" height="58" alt="xxxxxx" fetchpriority="high" decoding="async" class="h-logo"></a></div>
+        <?php else: ?>
+        <h1 class="header_logo"><a href="#"><img src="/cmn/svg/logo.svg" width="200" height="58" alt="xxxxxx" fetchpriority="high" decoding="async" class="h-logo"></a></h1>
+        <?php endif; ?>
+        <div class="header_lnk">
+            <ul class="lnk_lst ver1">
+                <li><a href="#">店舗一覧</a></li>
+                <li><a href="#">サービス内容</a></li>
+                <li><a href="#">お知らせ</a></li>
+                <li><a href="#">ZEAL通信</a></li>
+            </ul>
+            <ul class="lnk_lst ver2">
+                <li><a href="#"><span>トレーナーとして働きたい方</span></a></li>
+                <li><a href="#"><span>加盟を検討されている方</span></a></li>
+            </ul>
+        </div>
+        <div class="js-menu-open menu_btn"><img src="/cmn/svg/menu.svg" width="42" height="42" alt="メニューを開く" fetchpriority="high" decoding="async" class="h-menu"></div>
+    </div>
+    <div class="header_menu">
+        <div class="js-menu-close menu_close_btn"><img src="/cmn/svg/menu_close.svg" width="42" height="42" alt="メニューを閉じる" loading="lazy" class="h-menu_close"></div>
+        <ul class="lnk_lst ver1">
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">店舗一覧</a></li>
+            <li><a href="#">サービス内容</a></li>
+            <li><a href="#">お知らせ</a></li>
+            <li><a href="#">ZEAL通信</a></li>
+        </ul>
+        <ul class="lnk_lst ver2">
+            <li><a href="#"><span>トレーナーとして働きたい方</span></a></li>
+            <li><a href="#"><span>加盟を検討されている方</span></a></li>
+            <li class="is-reserve"><a href="#"><span>体験予約はこちら</span></a></li>
+        </ul>
+        <ul class="lnk_lst ver3">
+            <li><a href="#">会社概要</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+    </div>
+    <div class="headerOverlay"></div>
+</header>

@@ -1,0 +1,54 @@
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<?php require_once $_SERVER["DOCUMENT_ROOT"]. "/cmn/inc/common.html"; ?>
+<?php if ($_SERVER["SCRIPT_NAME"] !== "/index.html"): ?>
+<link rel="stylesheet" type="text/css" href="/cmn/css/common.css?date=20260428">
+<?php endif; ?>
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://xxxxxx.com/#organization",
+  "name": "ここにサイトの名前が入ります",
+  "url": "https://xxxxxx.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://xxxxxx.com/cmn/svg/logo.svg",
+    "width": xxx,
+    "height": xxx
+  },
+  "image": "https://xxxxxx.com/ogp.png",
+  "description": "ここにディスクリプションがはいります",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "xxxxxx",
+    "addressLocality": "xxxxxx",
+    "addressRegion": "xxxxxx",
+    "postalCode": "000-0000",
+    "addressCountry": "JP"
+  },
+  "telephone": "00-0000-0000",
+  "sameAs": [
+    "https://x.com/xxxxxx",
+    "https://www.instagram.com/xxxxxx/",
+    "https://www.tiktok.com/xxxxxx",
+    "https://www.youtube.com/xxxxxx"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "availableLanguage": "Japanese",
+    "url": "https://xxxxxx.com/inquiry/"
+  }
+},{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://xxxxxx.com/#website",
+  "url": "https://xxxxxx.com/",
+  "name": "ここにサイトの名前が入ります",
+  "publisher": {
+    "@id": "https://xxxxxx.com/#organization"
+  }
+}]
+</script>

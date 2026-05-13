@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path 'C:\\\\claude\\\\templates' -Recurse -Directory | ForEach-Object { $_.FullName.Substring\\('C:\\\\claude\\\\templates'.Length+1\\) })",
+      "Bash(grep -oE '#[0-9a-fA-F]{3,8}\\\\b' \"C:/claude/templates/cmn/css/common.css\")",
+      "Bash(grep -nE \"splide|Splide|jQuery|\\\\\\\\\\\\$\\\\\\(\" \"C:/claude/templates/index.html\")"
+    ]
+  }
+}
